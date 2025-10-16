@@ -1,5 +1,3 @@
-
-
 def main():
 
   text = formatted("Name: ")
@@ -26,3 +24,37 @@ def formatted(prompt):
   return text
 
 main()
+
+
+
+
+# Optimized
+
+# def main():
+#     names = get_names()
+#     print(format_names(names))
+
+
+# def get_names():
+#     names = []
+#     while True:
+#         try:
+#             name = input("Name: ")
+#             names.append(name)
+#         except EOFError:
+#             print()  # print a newline before returning
+#             return names
+
+
+# def format_names(names):
+#     text = "Adieu, adieu, to "
+#     if len(names) == 1:
+#         return text + names[0]
+#     elif len(names) == 2:
+#         return text + f"{names[0]} and {names[1]}"
+#     else:
+#         return text + f"{', '.join(names[:-1])}, and {names[-1]}"
+
+
+# if __name__ == "__main__":
+#     main()
